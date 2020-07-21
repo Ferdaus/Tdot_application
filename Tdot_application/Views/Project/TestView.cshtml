@@ -1,0 +1,12 @@
+﻿@model Tdot_application.Models.Project
+@{
+    ViewBag.Title = "TestView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>CRS: @Model.CRS</h2>
+<h2>Date: @Model.StartDate</h2>
+<h2>Analyst Name: @Model.Analyst</h2>
+<h2>Type of volume data to be used for analysis: @Model.VolumeDataType</h2>
+<h2>Enter Average Annual Daily Traffic value: @Model.AadtValue</h2>
+

@@ -1,0 +1,24 @@
+﻿@model Tdot_application.ViewModels.ProjectAndVolumeDataViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Project.CRS</h2>
+<h2>@Model.Project.Analyst</h2>
+
+
+@if (Model.EstimatedHourlyVolumes.Count == 0)
+{
+    <text> This project has no record of volume data </text>
+}
+else
+{
+    <ul>
+        @foreach (var estimatedHourlyVolumes in Model.EstimatedHourlyVolumes)
+        {
+            <li>@estimatedHourlyVolumes.HourOne</li>
+        }
+    </ul>
+}
+

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Tdot_application.Models.Project>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Projects</h2>
+
+@if (!Model.Any())
+{
+    <p>We don't have created any projects yet.</p>
+}
+else
+
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Project</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var project in Model)
+            {
+                <tr>
+                   <td>@Html.ActionLink(project.CRS, "Details", "Project", new { id = project.Id }, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+}
