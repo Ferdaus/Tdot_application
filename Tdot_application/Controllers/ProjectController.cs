@@ -17,7 +17,7 @@ namespace Tdot_application.Controllers
             { CRS = "Knox Co 1-40 MM 377" ,
             StartDate = new DateTime(219, 10, 01),
             Analyst = "Joseph",
-            VolumeDataType ="AADT",
+            //VolumeDataType ="AADT",
             AadtValue = 10,
 
             }; 

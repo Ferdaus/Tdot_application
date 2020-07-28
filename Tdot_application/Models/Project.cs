@@ -16,27 +16,33 @@ namespace Tdot_application.Models
 
         public string MOTScenario { get; set; }
         
-        //create new datatype later
-        public string VolumeDataType { get; set; }
+        //create new datatype later: done
+        public VolumeDataType VolumeDataType { get; set; }
+        public byte VolumeDataTypeId { get; set; }
         public double AadtValue { get; set; }
         
         //create new datatype later
-        public string HourlyDistributionType { get; set; }
+        public HourlyDistributionType HourlyDistributionType { get; set; }
+        public byte HourlyDistributionTypeId { get; set; }
 
         //create new datatype later
-        public string DirectionOfTravel { get; set; }
+        public DirectionType DirectionType { get; set; }
+        public byte DirectionTypeId { get; set; }
 
         public double TruckBusBaseProportion { get; set; }
         public int NumberOfLanes { get; set; }
         
         //create new datatype later
-        public string TerrainType { get; set; }
+        public TerrainType TerrainType { get; set; }
+        public byte TerrainTypeId { get; set; }
 
         public double LaneWidth { get; set; }
         public double LateralClearanceRightSide { get; set; }
         public int NumberOfLanesWithinThreeMiles { get; set; }
         public double UserDefinedAdjustment { get; set; }
         public int CalibrationOfBaseCapacity { get; set; }
+
+
 
 
 
