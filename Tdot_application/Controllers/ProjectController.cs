@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,16 @@ namespace Tdot_application.Controllers
 {
     public class ProjectController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public ProjectController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Project/TestView
         public ActionResult TestView()
         {
@@ -37,13 +48,14 @@ namespace Tdot_application.Controllers
 
         public ViewResult Index()
         {
-            var projects = GetProjects(); 
+            var projects = _context.Projects.Include(p => p.TerrainType).Include(p => p.HourlyDistributionType).ToList();
+            
             return View(projects);
         }
 
         public ActionResult Details(int id)
         {
-            var project = GetProjects().SingleOrDefault(c => c.Id == id);
+            var project = _context.Projects.SingleOrDefault(c => c.Id == id);
 
             if (project == null)
                 return HttpNotFound();
@@ -84,6 +96,7 @@ namespace Tdot_application.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
         }
 
+        /*
         private IEnumerable<Project> GetProjects()
         {
             return new List<Project>
@@ -93,6 +106,7 @@ namespace Tdot_application.Controllers
 
             };
 
-        }
+        } 
+        */
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,6 +11,8 @@ namespace Tdot_application.Models
         public DateTime StartDate { get; set; }
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(255)]
         public string CRS { get; set; }
         
         public string Analyst { get; set; }

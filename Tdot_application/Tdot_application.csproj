@@ -209,6 +209,10 @@
     <Compile Include="Migrations\202007280204410_PopulateTerrainTypes.Designer.cs">
       <DependentUpon>202007280204410_PopulateTerrainTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007280216106_ApplyAnnotationToProjectCRS.cs" />
+    <Compile Include="Migrations\202007280216106_ApplyAnnotationToProjectCRS.Designer.cs">
+      <DependentUpon>202007280216106_ApplyAnnotationToProjectCRS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DirectionType.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007280204410_PopulateTerrainTypes.resx">
       <DependentUpon>202007280204410_PopulateTerrainTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007280216106_ApplyAnnotationToProjectCRS.resx">
+      <DependentUpon>202007280216106_ApplyAnnotationToProjectCRS.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

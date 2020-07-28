@@ -16,16 +16,22 @@ else
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Project</th>
-             
+                <th>Project CRS</th>
+                <th>Project Analyst</th>
+                <th>Terrain Type</th>
+                <th>Hourly Dist Type</th>
+
             </tr>
         </thead>
         <tbody>
             @foreach (var project in Model)
             {
-                <tr>
-                   <td>@Html.ActionLink(project.CRS, "Details", "Project", new { id = project.Id }, null)</td>
-                </tr>
+            <tr>
+                <td>@Html.ActionLink(project.CRS, "Details", "Project", new { id = project.Id }, null)</td>
+                <td>@project.Analyst </td>
+                <td>@project.TerrainType.Name</td>
+                <td>@project.HourlyDistributionType.Name</td>
+            </tr>
             }
         </tbody>
     </table>
